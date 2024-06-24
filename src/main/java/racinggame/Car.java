@@ -40,6 +40,18 @@ public class Car {
         return false;
     }
 
+    public boolean isWinner(Position maxPosition) {
+        return position.equals(maxPosition);
+    }
+
+    public Position getMaxPosition(Position maxPosition) {
+        if (position.isGreaterThan(maxPosition)) {
+            return position;
+        }
+
+        return maxPosition;
+    }
+
     public Position getPosition() {
         return position;
     }
@@ -47,4 +59,5 @@ public class Car {
     public Name getName() {
         return name;
     }
+
 }
