@@ -10,6 +10,12 @@ public class Cars {
         this.cars = cars;
     }
 
+    public void race() {
+        for (Car car : cars) {
+            car.move();
+        }
+    }
+
     public List<Car> getWinners() {
         Position maxPosition = getMaxPosition();
 
@@ -24,5 +30,9 @@ public class Cars {
         }
 
         return maxPosition;
+    }
+
+    public List<Car> getCars() {
+        return cars;
     }
 }
